@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Enigma_24 Unified Startup Script
-# This script starts the Backend, Frontend, and Ancillary Agent (Streamlit)
+# TradeLens Unified Startup Script
+# This script starts the Backend, Frontend, and Chatbot (Streamlit)
 
 PROJECT_ROOT=$(pwd)
 
-echo "🚀 Starting Enigma_24 Workspace..."
+echo "🚀 Starting TradeLens Workspace..."
 
 # 1. Clear existing ports
 echo "🧹 Clearing existing processes on ports 3000, 5000, 8501..."
