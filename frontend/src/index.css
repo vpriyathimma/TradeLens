@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Soft Pastel Color Palette */
+:root {
+  /* Light Mode - Soft Pastels */
+  --bg-primary: #FDF8F9;
+  --bg-secondary: #FCF0F2;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FDF8F9;
+  --text-primary: #4A4A4A;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --accent-primary: #E8A0B0;
+  --accent-primary-light: #F0C4CF;
+  --accent-success: #8ECDA8;
+  --accent-success-light: #B5E3C8;
+  --accent-warning: #F5D89A;
+  --accent-danger: #E8A0A0;
+  --border-color: #F5E1E5;
+  --shadow-color: rgba(232, 160, 176, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(245, 225, 229, 0.6);
+}
+
+.dark {
+  /* Dark Mode - Muted Pastels */
+  --bg-primary: #1F1D21;
+  --bg-secondary: #2A272E;
+  --bg-card: #2A272E;
+  --bg-card-hover: #353139;
+  --text-primary: #F5F0F2;
+  --text-secondary: #D4CED0;
+  --text-muted: #9A939A;
+  --accent-primary: #D4A0B0;
+  --accent-primary-light: #E8C4CF;
+  --accent-success: #A8D4BA;
+  --accent-success-light: #C4E8D0;
+  --accent-warning: #E8D4A0;
+  --accent-danger: #D4A0A0;
+  --border-color: #3D3840;
+  --shadow-color: rgba(212, 160, 176, 0.1);
+  --glass-bg: rgba(42, 39, 46, 0.85);
+  --glass-border: rgba(61, 56, 64, 0.6);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px var(--accent-primary);
+  }
+
+  50% {
+    box-shadow: 0 0 20px var(--accent-primary);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-light) 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+/* Progress Bar Glow */
+.progress-glow {
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary-light);
+}
