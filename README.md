@@ -78,4 +78,4 @@ TradeLens is an AI-powered stock market analytics platform designed to enhance t
 
 ---
 
-**Happy Trading!** 📈
+**Happy Trading!** 
